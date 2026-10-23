@@ -1,0 +1,152 @@
+
+body {
+  font-family: Arial, sans-serif;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #f5f2fa;
+  color: #29243a;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #7046a8;
+}
+
+#search-form {
+  display: flex;
+  gap: 10px;
+}
+
+#search-input {
+  flex: 1;
+  min-width: 0;
+  padding: 12px;
+  border: 1px solid #d8cce9;
+  border-radius: 8px;
+  background: #ffffff;
+  color: #29243a;
+  font-size: 15px;
+}
+
+#search-input:focus {
+  outline: 2px solid #c4a9e8;
+  border-color: #7046a8;
+}
+
+#search-button {
+  padding: 12px 20px;
+  background: #7046a8;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+#search-button:hover {
+  background: #573486;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.categories button {
+  padding: 7px 14px;
+  background: #ffffff;
+  color: #7046a8;
+  border: 1px solid #d8cce9;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.categories button:hover {
+  background: #7046a8;
+  color: white;
+  border-color: #7046a8;
+}
+
+#status {
+  margin-top: 25px;
+  color: #827991;
+  font-size: 14px;
+}
+
+#results {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 18px;
+  min-height: 180px;
+  padding: 20px;
+  background: #ffffff;
+  border: 1px solid #e4dced;
+  border-radius: 10px;
+}
+
+.empty-message {
+  grid-column: 1 / -1;
+  align-self: center;
+  text-align: center;
+  color: #827991;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+}
+
+@media (max-width: 480px) {
+  body {
+    margin-top: 15px;
+    padding: 12px;
+  }
+
+  #search-button {
+    padding: 12px;
+  }
+
+  #results {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    padding: 12px;
+    gap: 12px;
+  }
+}
+
+.image-card {
+  overflow: hidden;
+  border: 1px solid #e4dced;
+  border-radius: 8px;
+  background: #ffffff;
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+.image-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px #7046a820;
+}
+
+.image-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.image-card p {
+  padding: 10px;
+  margin: 0;
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
